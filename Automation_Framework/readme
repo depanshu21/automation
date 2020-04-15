@@ -1,0 +1,26 @@
+Project:- Automation Framework for Empirix
+Tools Used:- Selenium
+Language Used:- python
+Approach:-
+I am using simple Keyword driven approach to build a framework which consists below files-
+1. config.py -> it consists all information related to URL,loginid and passwords. Also it contains informationabout locators used in the project.
+2. Methods.py -> it contains all information related to module functions only.
+3. Testcase.py -> it contains all informationof the testcase which uses both config and Methods packaage to test the entire scenerios.
+
+Below are the modules which should be installed to run Suite.
+- nose # for test reporting
+- ChromeDriverManager 
+- Selenium
+
+Steps to see logs in jenkins
+1. Create a file logging.properties and a ConsoleHandler. 
+2. Then pass this file to the JVM by adding the system property -Djava.util.logging.config.file=<pathTo>/logging.properties. 
+3. A file like the following would set the level of hudson.security.csrf.CrumbFilter and hudson.plugins.git.GitStatus to SEVERE:
+4. Paste the below code in that file.
+	$JENKINS_HOME/logging.properties
+	.level = INFO/ERROR/WARNING/DEBUG
+	handlers= java.util.logging.ConsoleHandler
+	java.util.logging.ConsoleHandler.level=INFO
+	java.util.logging.ConsoleHandler.formatter=java.util.logging.SimpleFormatter
+	hudson.security.csrf.CrumbFilter.level = SEVERE
+	hudson.plugins.git.GitStatus.level = SEVERE

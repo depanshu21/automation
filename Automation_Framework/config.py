@@ -13,7 +13,8 @@ Dashboard="(//a[@href='/dashboard'])[2]"
 Tests="//a[@href='/tests']"
 Variables="//a[@data-i18n='_variables_']"
 Notificaton="//a[@data-i18n='_notifications_']"
-
+JHelp="//a[contains(.,'ヘルプ')]"
+EHelp="//a[contains(.,'Help')]"
 #client_details_xpath
 client="//span[contains(.,'Client')]"
 c_details="//h3[text()='Client Details']"
